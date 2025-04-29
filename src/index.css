@@ -1,0 +1,46 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Custom Colors */
+    --charcoal: 210 9% 12%;
+    --tan: 39 63% 54%;
+    --tan-dark: 39 70% 40%;
+    --cream: 42 30% 90%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[hsl(var(--cream))] text-[hsl(var(--charcoal))];
+  }
+}
+
+.text-charcoal {
+  color: hsl(var(--charcoal));
+}
+.bg-tan {
+  background-color: hsl(var(--tan));
+}
+.bg-tan-dark:hover {
+  background-color: hsl(var(--tan-dark));
+}
+.bg-cream {
+  background-color: hsl(var(--cream));
+}
+
+/* ——— IMG COMPARISON ORIENTATION HELPERS ——— */
+.img-before-horizontal { object-position: left center; }
+.img-after-horizontal  { object-position: right center; }
+.img-before-vertical   { object-position: top center; }
+.img-after-vertical    { object-position: bottom center; }
