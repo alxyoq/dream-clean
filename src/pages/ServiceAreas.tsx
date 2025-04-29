@@ -1,7 +1,7 @@
+// src/pages/ServiceAreas.tsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Define the available service areas
 type AreaKey = keyof typeof AREAS;
 const AREAS = {
   philadelphia: {
@@ -40,8 +40,9 @@ export default function ServiceAreas() {
               <img
                 src={img}
                 alt={name}
-                className={`w-64 h-40 object-cover rounded-lg shadow-md transition-transform \
-                  ${isActive ? "scale-105 border-4 border-tan" : "hover:scale-105"}`}
+                className={`w-64 h-40 object-cover rounded-lg shadow-md transition-transform ${
+                  isActive ? "scale-105 border-4 border-tan" : "hover:scale-105"
+                }`}
               />
               <span className="mt-3 block text-center font-semibold">
                 {name.split(",")[0]}

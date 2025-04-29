@@ -1,3 +1,4 @@
+// src/pages/Home.tsx
 import React from "react";
 import bookingURL from "../shared/bookingURL";
 import { FaCar, FaTint, FaSoap } from "react-icons/fa";
@@ -25,10 +26,14 @@ export default function Home() {
         >
           <div className="w-full lg:w-1/2 text-center lg:text-left mt-8 lg:mt-0">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-              Professional Mobile Detailing<br />Serving South Jersey & Philadelphia
+              Professional Mobile Detailing
+              <br />
+              Serving South Jersey & Philadelphia
             </h1>
             <p className="mt-4 max-w-md mx-auto lg:mx-0">
-              We bring showroom shine to your doorstep. From surface cleaning to ceramic coatings, experience the ultimate care for your vehicle without leaving home.
+              We bring showroom shine to your doorstep. From surface cleaning
+              to ceramic coatings, experience the ultimate care for your
+              vehicle without leaving home.
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6 mt-8">
               <a
@@ -73,9 +78,21 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { icon: FaCar, title: "Exterior Detailing", desc: "Restore shine and protect your paint." },
-              { icon: FaTint, title: "Interior Cleaning", desc: "Deep clean upholstery, carpets & trim." },
-              { icon: FaSoap, title: "Ceramic Coating", desc: "Long-lasting protection & gloss." },
+              {
+                icon: FaCar,
+                title: "Exterior Detailing",
+                desc: "Restore shine and protect your paint.",
+              },
+              {
+                icon: FaTint,
+                title: "Interior Cleaning",
+                desc: "Deep clean upholstery, carpets & trim.",
+              },
+              {
+                icon: FaSoap,
+                title: "Ceramic Coating",
+                desc: "Long-lasting protection & gloss.",
+              },
             ].map((service, idx) => (
               <motion.div
                 key={idx}
@@ -132,9 +149,7 @@ export default function Home() {
       {/* Final Call-To-Action */}
       <section className="py-16 bg-tan text-white text-center">
         <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Ride?
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Ride?</h2>
           <p className="mb-8">Experience premium mobile detailing today.</p>
           <motion.a
             href={bookingURL}
