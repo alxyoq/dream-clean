@@ -1,3 +1,4 @@
+// src/components/TransformationSlider.tsx
 import React from 'react';
 import 'img-comparison-slider';
 import 'img-comparison-slider/dist/styles.css';
@@ -30,7 +31,7 @@ export const TransformationSlider: React.FC<TransformationSliderProps> = ({
 
   return (
     <div className="relative w-full aspect-square max-w-2xl mx-auto overflow-hidden rounded-lg shadow-lg">
-      <img-comparison-slider className="w-full h-full" hover value="50">
+      <img-comparison-slider className="w-full h-full" hover value={50}>
         <div slot="first" className="relative w-full h-full">
           <img
             src={beforeImage}
